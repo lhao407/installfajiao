@@ -1,12 +1,82 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head> 
-<meta charset="utf-8"> 
-<title>在线安装</title> 
-</head> 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="description" content="在线安装" />
+    <meta name="keywords" content="fajiao" />
+    <title>发酵车间在线安装 </title>
+    <link rel="shortcut icon" href="https://lhao407.github.io/install/assets/images/logo.png">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/my.css" />
+</head>
 <body>
+    <div class="wrap">
+        <div class="main">
+            <div class="topbread" style="margin-bottom: 20px;">
+                <div class="container">
+                    <h1 class="text-center">发酵车间 在线安装 </h1>
+                 
+                </div>
+            </div>
+            <div style="margin-top:70px; margin-bottom: 20px;">
+                <div style="text-align:center;">
+                      <div class="polaroid">
+                        <div class="logo">
+                            <img src="https://lhao407.github.io/installfajiao/assets/images/icon.png" class="img-circle" width="120" height="120" />
+                        </div>
+                    </div>
+                    <ul class="breadcrumb" id="ul">
+                        <li>Version: 1.0 </li>
+                        <li>Size: 65.2 MB</li>
+                    </ul>
+                    <div style="padding-top:20px;">
+                        <span id="checkinfo">
+                            <a href="itms-services://?action=download-manifest&url=https://lhao407.github.io/installfajiao/manifest.plist" class="btn btn-success btn-lg btn-circle" id="uaApp">在线安装</a>
+                            <div class="uatip" id="uaTip">
+                                <span class="uatip-icon"></span>
+                                <p class="uatip-txt">点击右上角<br/>选择在Safari中打开</p>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <br/>
+            </div>
+          
+            <div class="col-md-8 col-md-offset-2">
+                <hr class="devider devider-dotted">
+            </div>
+            <div class="col-md-8 col-md-offset-2">
 
-<a  href="itms-services://?action=download-manifest&amp;url=https://raw.githubusercontent.com/lhao407/install/master/manifest.plist">点击在线安装ipa</a>
- 
+               </p>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="text-center">
+                
+        </div>
+    </div>
+<script type="text/javascript" src="assets/js/jquery-1.7.2.min.js"></script>
+<script>
+    function weixinTip(ele){
+        var ua = navigator.userAgent;
+        var Browser = /Safari/.test(ua) && !/Chrome/.test(ua);
+        if(Browser == 0){
+            ele.onclick=function(e){
+                if(window.event) window.event.returnValue = false ;
+                document.getElementById('uaTip').style.display='block';
+            }
+        } else {
+            $("#uaApp").click(function () {
+                $("#uaApp").attr("style","display:block;");
+                $("#ul").attr("style","display:none;");
+            });
+        }
+    }
+    var btn1 = document.getElementById('uaApp');
+    weixinTip(btn1);
 </body>
 </html>
