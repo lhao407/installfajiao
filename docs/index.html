@@ -54,29 +54,6 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <div class="text-center">
-                
-        </div>
-    </div>
 <script type="text/javascript" src="assets/js/jquery-1.7.2.min.js"></script>
-<script>
-    function weixinTip(ele){
-        var ua = navigator.userAgent;
-        var Browser = /Safari/.test(ua) && !/Chrome/.test(ua);
-        if(Browser == 0){
-            ele.onclick=function(e){
-                if(window.event) window.event.returnValue = false ;
-                document.getElementById('uaTip').style.display='block';
-            }
-        } else {
-            $("#uaApp").click(function () {
-                $("#uaApp").attr("style","display:block;");
-                $("#ul").attr("style","display:none;");
-            });
-        }
-    }
-    var btn1 = document.getElementById('uaApp');
-    weixinTip(btn1);
 </body>
 </html>
